@@ -87,8 +87,7 @@ namespace SynthesizeVoice
 
             var responseSerializer = new DataContractJsonSerializer(typeof(SynthesizeResponse));
             client.DefaultRequestHeaders.Accept.Clear();
-            // var url = String.Format("https://texttospeech.googleapis.com/v1beta1/text:synthesize?key={}", apiKey);
-            var url = String.Format("http://127.0.0.1:3000/v1beta1/text:synthesize?key={0}", apiKey);
+            var url = String.Format("https://texttospeech.googleapis.com/v1beta1/text:synthesize?key={}", apiKey);
             var postResponse = client
                 .PostAsync(
                     url,
